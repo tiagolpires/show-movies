@@ -1,0 +1,11 @@
+import './style.css'
+
+const index = () => {
+    return (
+        <>
+            <h1>Home Page</h1>
+        </>
+    )
+}
+
+export default index
