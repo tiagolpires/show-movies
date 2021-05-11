@@ -1,4 +1,5 @@
 import './style.css'
+import { HashLink as Link } from 'react-router-hash-link';
 import searchIcon from './icons/search.svg'
 
 const index = () => {
@@ -11,10 +12,10 @@ const index = () => {
                 <div className="main-header-menu">
                     <nav className="main-header-nav">
                         <div className="main-header-nav-item selected">
-                            <a href="home">INÍCIO</a>
+                            <Link to="/">INÍCIO</Link>
                         </div>
                         <div className="main-header-nav-item selected">
-                            <a href="home">CATÁLOGO </a>
+                            <Link to="/#catalog">CATÁLOGO</Link>
                         </div>
                     </nav>
                     <img src={searchIcon} alt="search" className="main-header-search-icon" />

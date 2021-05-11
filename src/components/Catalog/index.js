@@ -6,7 +6,7 @@ const index = () => {
     return (
         <>
             <section className="catalog-section">
-                <div className="catalog">
+                <div className="catalog" id="catalog">
                     <div className="catalog-filters">
                         <div className="catalog-left-filters">
                             <div className="catalog-filter">
