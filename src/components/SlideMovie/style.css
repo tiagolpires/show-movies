@@ -1,9 +1,11 @@
-.slide-movie-image {
-    margin-bottom: 14px;
+.slide-movie-container {
+    cursor: pointer;
+    margin: 0 20px;
 }
 .slide-movie-image {
     width: 218px;
     height: 328px;
+    margin-bottom: 14px;
 }
 
 .slide-movie-info h4{

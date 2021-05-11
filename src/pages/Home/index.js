@@ -1,13 +1,13 @@
 import './style.css'
 import Header from '../../components/Header'
-import SlideMovie from '../../components/SlideMovie'
+import Slider from '../../components/Slider'
 
 const index = () => {
     return (
         <>
             <Header/>
             <main className ="main-content" style={{backgroundImage: "url(/images/background-image.jpg)"}}>
-                <SlideMovie/>
+                <Slider/>
             </main>
         </>
     )

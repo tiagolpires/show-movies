@@ -1,0 +1,42 @@
+.slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.slider-arrow {
+    cursor: pointer;
+}
+
+.slider-content {
+    width: 80%;
+    max-width: 1040px;
+}
+
+.slider-title {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.slider-title span {
+    font-weight: 100;
+}
+
+.slider-title-circle {
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: #FE3189;
+}
+
+.slider-movies-container {
+    display: flex;
+    overflow: hidden;
+    margin-right: 20px;
+}

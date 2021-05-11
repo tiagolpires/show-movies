@@ -10,8 +10,9 @@
     align-items: center;
     margin: auto;
     width: 80%;
-    max-width: 1040px;
-    height: 80px;
+    max-width: 1000px;
+    height: 10vh;
+    max-height: 100px;
 }
 .main-header-logo {
     font-size: 1.8rem;

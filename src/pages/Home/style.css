@@ -1,7 +1,9 @@
 .main-content {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-position: center;
+    background-size: cover;
+    height: 90vh;
+    max-height: 940px;
 }
