@@ -1,0 +1,28 @@
+.single-movie-trailer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px 0;
+}
+
+.single-movie-trailer-title {
+    border-bottom: 2px solid #FE3189;
+    padding: 10px 0;
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+}
+
+.single-movie-trailer-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.single-movie-trailer-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

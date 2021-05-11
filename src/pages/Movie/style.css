@@ -7,3 +7,22 @@
     height: 90vh;
     max-height: 940px;
 }
+
+.single-movie-trailer-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-movie-back-button {
+    width: fit-content;
+    margin: auto;
+}
+
+.single-movie-back-button {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #FE3189;
+}
