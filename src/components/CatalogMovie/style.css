@@ -1,0 +1,39 @@
+.catalog-movie {
+    display: flex;
+}
+.catalog-movie-image {
+    width: 157px;
+    height: 232px;
+    margin-right: 20px;
+}
+
+.catalog-movie-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-movie-info h4{
+    font-size: 1.8rem;
+}
+
+.catalog-movie-info-gender {
+    font-size: 1.3rem;
+    color: #FE3189;
+    margin-bottom: 10px;
+}
+
+.catalog-movie-rate-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.catalog-movie-rate-container span{
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+.catalog-movie-info p {
+    font-size: 1.2rem;
+    color: #9F9FA0;
+}
