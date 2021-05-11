@@ -2,7 +2,7 @@ import './style.css'
 import Header from '../../components/Header'
 import Slider from '../../components/Slider'
 import CatalogHeader from '../../components/CatalogHeader'
-import CatalogMovie from '../../components/CatalogMovie'
+import Catalog from '../../components/Catalog'
 
 
 const index = () => {
@@ -13,9 +13,7 @@ const index = () => {
                 <Slider/>
             </main>
             <CatalogHeader/>
-            <div className="centralizing">
-                <CatalogMovie/>
-            </div>
+            <Catalog/>
         </>
     )
 }

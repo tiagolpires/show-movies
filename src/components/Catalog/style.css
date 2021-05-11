@@ -1,0 +1,72 @@
+.catalog-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px 0;
+}
+
+.catalog-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.catalog-left-filters {
+    display: flex;
+}
+
+.catalog-filter,
+.catalog-filter-trending,
+.catalog-load-more-button {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    background: linear-gradient(180deg, rgba(33,33,37,1) 0%, rgba(46,45,49,0.8) 100%);
+    border: 1px solid #2E2D31;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.catalog-filter-trending {
+    margin-left: 20px;
+}
+
+.catalog-filter-trending.selected,
+.catalog-load-more-button {
+    background: #FE3189;
+}
+
+.catalog-load-more-button {
+    margin: auto;
+    width: fit-content;
+}
+
+.catalog-filter img{
+    width: 10px;
+    margin-right: 10px;
+}
+
+.catalog-movies-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.catalog-movies-container.wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.catalog-movies-container.wrap .catalog-movie {
+    width: 48%;
+}

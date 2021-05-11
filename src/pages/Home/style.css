@@ -7,10 +7,3 @@
     height: 90vh;
     max-height: 940px;
 }
-
-.centralizing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-}

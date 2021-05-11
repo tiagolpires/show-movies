@@ -1,5 +1,7 @@
 .catalog-movie {
     display: flex;
+    margin: 20px 0;
+    cursor: pointer;
 }
 .catalog-movie-image {
     width: 157px;
@@ -10,6 +12,7 @@
 .catalog-movie-info {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .catalog-movie-info h4{
