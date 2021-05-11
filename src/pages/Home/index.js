@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Slider from '../../components/Slider'
 import CatalogHeader from '../../components/CatalogHeader'
 import Catalog from '../../components/Catalog'
+import Footer from '../../components/Footer'
 
 
 const index = () => {
@@ -14,6 +15,7 @@ const index = () => {
             </main>
             <CatalogHeader/>
             <Catalog/>
+            <Footer/>
         </>
     )
 }

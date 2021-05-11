@@ -1,0 +1,10 @@
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #18181C;
+    font-size: 1.4rem;
+    padding: 35px 0;
+    margin-top: 60px;
+}
