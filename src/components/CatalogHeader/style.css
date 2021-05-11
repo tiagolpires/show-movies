@@ -1,0 +1,31 @@
+.catalog-header {
+    width: 100%;
+    background-color: #212125;
+    box-shadow: 0px 4px 25px 4px rgba(0,0,0,0.3);
+    border-top: 2px solid #FE3189;
+}
+
+.catalog-header-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    max-width: 1000px;
+    height: 10vh;
+    max-height: 100px;
+    font-size: 1.4rem;
+}
+
+.catalog-header-container span {
+    font-weight: 100;
+}
+
+.catalog-header-circle {
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: #FE3189;
+}
+
+

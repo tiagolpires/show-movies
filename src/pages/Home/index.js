@@ -1,6 +1,8 @@
 import './style.css'
 import Header from '../../components/Header'
 import Slider from '../../components/Slider'
+import CatalogHeader from '../../components/CatalogHeader'
+
 
 const index = () => {
     return (
@@ -9,6 +11,7 @@ const index = () => {
             <main className ="main-content" style={{backgroundImage: "url(/images/background-image.jpg)"}}>
                 <Slider/>
             </main>
+            <CatalogHeader/>
         </>
     )
 }
