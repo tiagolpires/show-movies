@@ -4,10 +4,23 @@
     justify-content: center;
     margin: 50px 0;
     width: 100%;
+    position: relative;
+    max-width: 1300px;
 }
 
-.slider-arrow {
+.slider-arrow-right,
+.slider-arrow-left {
+    margin: 0 30px;
+    position: absolute;
     cursor: pointer;
+}
+
+.slider-arrow-right {
+    right: 0;
+}
+
+.slider-arrow-left {
+    left: 0;
 }
 
 .slider-content {
@@ -38,5 +51,4 @@
 .slider-movies-container {
     display: flex;
     overflow: hidden;
-    margin-right: 20px;
 }

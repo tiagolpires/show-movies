@@ -6,6 +6,8 @@
     width: 218px;
     height: 328px;
     margin-bottom: 14px;
+    background-position: center;
+    background-size: cover;
 }
 
 .slide-movie-info h4{
