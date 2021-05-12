@@ -1,0 +1,44 @@
+.search-bar-movie {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #252529;
+    width: fit-content;
+    padding: 20px;
+    border: 1px solid #313136;
+}
+.search-bar-movie-image {
+    width: 98px;
+    height: 147px;
+    margin-right: 20px;
+    background-size: cover;
+}
+
+.search-bar-movie-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.search-bar-movie-info h4{
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+.search-bar-movie-info-gender {
+    font-size: 1.3rem;
+    color: #FE3189;
+    margin-bottom: 5px;
+}
+
+.search-bar-movie-rate-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-bar-movie-rate-container span{
+    font-size: 1.4rem;
+    margin-left: 10px;
+}

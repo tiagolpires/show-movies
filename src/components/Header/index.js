@@ -1,8 +1,12 @@
 import './style.css'
+import { useState } from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
 import searchIcon from './icons/search.svg'
+import SearchBar from '../SearchBar'
 
-const index = () => {
+const Index = () => {
+    const [isSearchBarActive, setIsSearchBarActive] = useState(false)
+                   
     return (
         <header className="main-header">
             <div className="main-header-container">
@@ -18,11 +22,17 @@ const index = () => {
                             <Link to="/#catalog">CATÁLOGO</Link>
                         </div>
                     </nav>
-                    <img src={searchIcon} alt="search" className="main-header-search-icon" />
+                    <img 
+                        src={searchIcon} 
+                        alt="search" 
+                        className={'main-header-search-icon ' + isSearchBarActive}
+                        onClick={() => setIsSearchBarActive(!isSearchBarActive)}
+                    />
                 </div>
             </div>
+            <SearchBar isSearchBarActive={isSearchBarActive} setIsSearchBarActive={setIsSearchBarActive}/>
         </header>
     )
 }
 
-export default index
+export default Index
