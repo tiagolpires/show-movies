@@ -7,9 +7,11 @@ const fetchApi = async(endpoint) => {
     return data
 }
 
-export default {
+const Api = {
     getTrendingMovies: async() => {
        const trendingMovies = await fetchApi(`/trending/movie/week?language=pt-BR&api_key=${apiKey}`)
        return trendingMovies
     }
 }
+
+export default Api
