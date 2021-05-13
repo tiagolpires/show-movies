@@ -1,23 +1,35 @@
 import './style.css'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import Api from '../../services/Api'
 import SingleMovie from '../../components/SingleMovie'
 import SingleMovieTrailer from '../../components/SingleMovieTrailer'
 
-const index = () => {
+const Index = (props) => {
+    const [movie, setMovie] = useState([])
+
+    useEffect(() => {
+        const getMovie = async() => {
+            const { id } = props.match.params 
+            const movie = await Api.getMovie(id)
+            setMovie(movie)
+        }
+        getMovie()
+    }, [props.match.params])
+
     return (
         <>
-            <Header/>
             <main className="single-movie-main" style={{backgroundImage: "url(/images/background-image.jpg)"}}>
-                <SingleMovie/>
+                <SingleMovie movie={movie}/>
             </main>
             <section className="single-movie-trailer-section">
-                <SingleMovieTrailer/>
+                <SingleMovieTrailer movie={movie} />
             </section>
-            <div className="single-movie-back-button">Voltar</div>
-            <Footer/>
+            <Link to="/">
+                <div className="single-movie-back-button">Voltar</div>
+            </Link>
         </>
     )
 }
 
-export default index
+export default Index

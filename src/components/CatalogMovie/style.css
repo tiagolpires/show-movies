@@ -1,12 +1,12 @@
 .catalog-movie {
     display: flex;
     margin: 20px 0;
-    cursor: pointer;
 }
 .catalog-movie-image {
     width: 157px;
     height: 232px;
     margin-right: 20px;
+    background-size: cover;
 }
 
 .catalog-movie-info {

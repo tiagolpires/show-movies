@@ -41,12 +41,16 @@
 
 .catalog-filter-trending {
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .catalog-filter-trending.selected,
 .catalog-load-more-button {
     background: #FE3189;
-    cursor: pointer;
+}
+
+.catalog-filter-trending.selected {
+    cursor: default;
 }
 
 .catalog-load-more-button {

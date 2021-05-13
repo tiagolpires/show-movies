@@ -1,34 +1,37 @@
 import './style.css'
 import { useEffect, useState } from 'react'
-import Api from '../../Api'
-import Header from '../../components/Header'
+import Api from '../../services/Api'
 import Slider from '../../components/Slider'
 import CatalogHeader from '../../components/CatalogHeader'
 import Catalog from '../../components/Catalog'
-import Footer from '../../components/Footer'
-
 
 const Index = () => {
     const [trendingMovies, setTrendingMovies] = useState([])
+    const [catalogMovies, setCatalogMovies] = useState([])
+    const [catalogMoviesCategorie, setCatalogMoviesCategorie] = useState('mais populares')
 
     useEffect(() => {
-        getTrendingMovies()
-    }, [])
+        const getTrendingMovies = async() => {
+            const trendingMovies = await Api.getTrendingMovies()
+            setTrendingMovies(trendingMovies)
+        }
 
-    async function getTrendingMovies() {
-        const trendingMovies = await Api.getTrendingMovies()
-        setTrendingMovies(trendingMovies.results)
-    }
+        const getCatalogMovies = async() => {
+            const catalogMovies = await Api.getCatalogMovies(catalogMoviesCategorie)
+            setCatalogMovies(catalogMovies)
+        }
+
+        getTrendingMovies()
+        getCatalogMovies()
+    }, [catalogMoviesCategorie])
 
     return (
         <>
-            <Header/>
             <main className ="main-content" style={{backgroundImage: "url(/images/background-image.jpg)"}}>
-                <Slider movies={trendingMovies}/>    
+                <Slider movies={trendingMovies}/>
             </main>
             <CatalogHeader/>
-            <Catalog/>
-            <Footer/>
+            <Catalog movies={catalogMovies} setMoviesCategorie={setCatalogMoviesCategorie} moviesCategorie={catalogMoviesCategorie}/>
         </>
     )
 }
