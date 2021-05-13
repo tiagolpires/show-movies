@@ -4,7 +4,7 @@ import SlideMovie from '../SlideMovie'
 import leftArrow from './icons/left-arrow.svg'
 import rigthArrow from './icons/right-arrow.svg'
 
-const Index = ({ movies }) => {
+const Index = ({ movies, genres }) => {
     const [scrollX, setScrollX] = useState(0)
 
     const handleRightArrow = () =>{
@@ -30,7 +30,7 @@ const Index = ({ movies }) => {
                 </div>
                 <div className="slider-movies-container">
                     {movies.map(movie => (
-                        <SlideMovie movie={movie}/>  
+                        <SlideMovie movie={movie} genres={genres}/>  
                     ))}
                 </div>
             </div>
