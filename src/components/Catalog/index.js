@@ -2,7 +2,7 @@ import './style.css'
 import CatalogMovie from '../CatalogMovie'
 import downArrow from './icons/down-arrow.svg'
 
-const index = () => {
+const index = ({ movies, genres }) => {
     return (
         <>
             <section className="catalog-section">
@@ -38,11 +38,9 @@ const index = () => {
                         </div>
                     </div>
                     <div className="catalog-movies-container wrap">
-                        <CatalogMovie/>
-                        <CatalogMovie/>
-                        <CatalogMovie/>
-                        <CatalogMovie/>
-                        <CatalogMovie/>
+                        {movies.map(movie => (
+                            <CatalogMovie movie={movie} genres={genres}/>  
+                        ))}
                     </div>
                     <div className="catalog-load-more-button">
                         <span>carregar mais</span>
