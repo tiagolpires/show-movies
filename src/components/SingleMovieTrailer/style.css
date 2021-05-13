@@ -4,20 +4,21 @@
     width: 80%;
     max-width: 1000px;
     margin: 40px 0;
+    font-size: 1.6rem;
 }
 
 .single-movie-trailer-title {
     border-bottom: 2px solid #FE3189;
     padding: 10px 0;
-    font-size: 1.4rem;
     margin-bottom: 40px;
 }
 
-.single-movie-trailer-video {
+.single-movie-trailer-video.on {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
 }
+
 .single-movie-trailer-video iframe {
     position: absolute;
     top: 0;

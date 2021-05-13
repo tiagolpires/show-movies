@@ -19,29 +19,22 @@ const Index = ({ movies }) => {
     const handleLeftArrow = () =>{}
 
     return (
-        <>
-            <div className="slider">
-                <img src={leftArrow} alt="back" className="slider-arrow-left" onClick={handleLeftArrow}/>
-                <img src={rigthArrow} alt="next" className="slider-arrow-right" onClick={handleRightArrow}/>
+        <div className="slider">
+            <img src={leftArrow} alt="back" className="slider-arrow-left" onClick={handleLeftArrow}/>
+            <img src={rigthArrow} alt="next" className="slider-arrow-right" onClick={handleRightArrow}/>
 
-                <div className="slider-content">
-                    <div className="slider-title">
-                        <div className="slider-title-circle"></div>
-                        <h3>LANÇAMENTOS <span>DA SEMANA</span></h3>
-                    </div>
-                    <div className="slider-movies-container">
-                        {movies.map((movie) => (
-                            <SlideMovie
-                                key={movie.id} 
-                                title={movie.title} 
-                                imageUrl={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} 
-                                rate={movie.vote_average}
-                            />    
-                        ))}
-                    </div>
+            <div className="slider-content">
+                <div className="slider-title">
+                    <div className="slider-title-circle"></div>
+                    <h3>LANÇAMENTOS <span>DA SEMANA</span></h3>
+                </div>
+                <div className="slider-movies-container">
+                    {movies.map(movie => (
+                        <SlideMovie movie={movie}/>  
+                    ))}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
