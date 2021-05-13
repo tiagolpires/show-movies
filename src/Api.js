@@ -3,7 +3,7 @@ const apiKey = process.env.REACT_APP_API_KEY
 
 const fetchApi = async(endpoint) => {
     const req = await fetch(`${apiBaseUrl + endpoint}`)
-    const data = req.json()
+    const data = await req.json()
     return data
 }
 
@@ -13,10 +13,17 @@ const Api = {
        return trendingMovies
     },
 
-    getTopRatedMovies: async() => {
-       const topRatedMovies = await fetchApi(`/movie/top_rated?api_key=${apiKey}&language=pt-BR`)
-       console.log(topRatedMovies)
-       return topRatedMovies
+    getCatalogMovies: async(moviesCategorie) => {
+        const categoriesObj = {
+            'mais populares': 'sort_by=popularity.desc',
+            'ação': 'with_genres=28',
+            'drama': 'with_genres=18',
+            'comédia': 'with_genres=35',
+            'romance': 'with_genres=10749',
+            'aventura': 'with_genres=12' 
+        }
+        const catalogMovies = await fetchApi(`/discover/movie?api_key=${apiKey}&language=pt-BR&${categoriesObj[moviesCategorie.toLowerCase()]}`)
+        return catalogMovies
     },
 
     getGenreList: async() => {

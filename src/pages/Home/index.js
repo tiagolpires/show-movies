@@ -7,7 +7,8 @@ import Catalog from '../../components/Catalog'
 
 const Index = () => {
     const [trendingMovies, setTrendingMovies] = useState([])
-    const [topRatedMovies, setTopRatedMovies] = useState([])
+    const [catalogMovies, setCatalogMovies] = useState([])
+    const [catalogMoviesCategorie, setCatalogMoviesCategorie] = useState('mais populares')
     const [genres, setGenres] = useState({})
 
     useEffect(() => {
@@ -16,9 +17,9 @@ const Index = () => {
             setTrendingMovies(trendingMovies.results)
         }
 
-        const getTopRatedMovies = async() => {
-            const topRatedMovies = await Api.getTopRatedMovies()
-            setTopRatedMovies(topRatedMovies.results)
+        const getCatalogMovies = async() => {
+            const catalogMovies = await Api.getCatalogMovies(catalogMoviesCategorie)
+            setCatalogMovies(catalogMovies.results)
         }
 
         const getGenreList = async() => {
@@ -32,9 +33,9 @@ const Index = () => {
         }
 
         getTrendingMovies()
-        getTopRatedMovies()
+        getCatalogMovies()
         getGenreList()
-    }, [])
+    }, [catalogMoviesCategorie])
 
     return (
         <>
@@ -42,7 +43,7 @@ const Index = () => {
                 <Slider movies={trendingMovies} genres={genres}/>
             </main>
             <CatalogHeader/>
-            <Catalog movies={topRatedMovies} genres={genres}/>
+            <Catalog movies={catalogMovies} genres={genres} setMoviesCategorie={setCatalogMoviesCategorie} moviesCategorie={catalogMoviesCategorie}/>
         </>
     )
 }
