@@ -30,7 +30,7 @@ const Index = ({ movies, genres }) => {
                 </div>
                 <div className="slider-movies-container">
                     {movies.map(movie => (
-                        <SlideMovie movie={movie} genres={genres}/>  
+                        <SlideMovie key={movie.id} movie={movie} genres={genres}/>  
                     ))}
                 </div>
             </div>

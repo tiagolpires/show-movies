@@ -1,7 +1,7 @@
 import './style.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Api from '../../Api'
+import Api from '../../services/Api'
 import SingleMovie from '../../components/SingleMovie'
 import SingleMovieTrailer from '../../components/SingleMovieTrailer'
 

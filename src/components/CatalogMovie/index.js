@@ -1,24 +1,8 @@
 import './style.css'
-import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import rateStar from './icons/rate-star.svg'
 
-const Index = ({ movie: {title, vote_average: rate, id, poster_path: posterPath, genre_ids: genreIds, overview}, genres }) => {
-    const [movieGenres, setMovieGenres] = useState([])
-
-    useEffect(() => {
-        const getGenres = () => {
-            if(genreIds.length > 0 && Object.keys(genres).length > 0) {
-                let genresList = [] 
-                for(var i = 0; i < 2; i++) {
-                    genres[genreIds[i]] && genresList.push(genres[genreIds[i]])
-                }  
-                setMovieGenres(genresList)
-            }
-        }
-        getGenres()
-    }, [genres, genreIds])
-
+const Index = ({ movie: {title, vote_average: rate, id, poster_path: posterPath, overview, genres}}) => {
     return (
             <div className="catalog-movie">
                 <Link to={`/movie/` + id}>
@@ -26,7 +10,7 @@ const Index = ({ movie: {title, vote_average: rate, id, poster_path: posterPath,
                 </Link>
                 <div className="catalog-movie-info">
                     <h4>{title}</h4>
-                    <span className="catalog-movie-info-gender">{movieGenres.length > 0 && movieGenres.join(', ')}</span>
+                    <span className="catalog-movie-info-gender">{genres.length > 0 && genres.slice(0, 2).join(', ')}</span>
                     <div className="catalog-movie-rate-container">
                         <img src={rateStar} alt="rate-star" />
                         <span>{rate}</span>

@@ -43,7 +43,7 @@ const Index = ({ movies, genres, setMoviesCategorie, moviesCategorie }) => {
                 </div>
                 <div className={`catalog-movies-container ${catalogDisplayMode === 'em grid' ? 'wrap' : 'list'}`}>
                     {movies.map(movie => (
-                        <CatalogMovie movie={movie} genres={genres}/>  
+                        <CatalogMovie key={movie.id} movie={movie} genres={genres}/>  
                     ))}
                 </div>
                 <div className="catalog-load-more-button">
