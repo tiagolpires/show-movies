@@ -6,9 +6,10 @@
     width: 100%;
     left: 0;
     background-color: #212125;
-    box-shadow: 0px 0px 25px 4px rgba(0,0,0,0.3);
-    padding: 20px 0;
-    z-index: 1;
+    box-shadow: 0px 15px 25px 4px rgb(0 0 0 / 10%);
+    padding: 40px 0;
+    z-index: 3;
+    margin-top: 2px;
 }
 
 .search-bar-container.on {
@@ -17,20 +18,22 @@
 
 .search-bar {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 80%;
     max-width: 1040px;
 }
 
 .search-bar input {
-    width: 100%;
     background: none;
     outline: none;
     border: none;
     border-bottom: 2px solid #FE3189;
     padding-bottom: 10px;
     font-size: 3rem;
-    margin: 0 20px;
+    /* margin: 0 20px; */
+    width: 100%;
+    max-width: 1000px;
 }
 
 .search-bar-movies-container {
@@ -39,3 +42,10 @@
     flex-wrap: wrap;
 }
 
+@media(max-width: 768px) {
+    .search-bar input {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+    
+}
