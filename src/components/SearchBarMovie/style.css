@@ -4,7 +4,7 @@
     margin: 20px;
     cursor: pointer;
     background-color: #252529;
-    width: fit-content;
+    width: 300px;
     padding: 20px;
     border: 1px solid #313136;
 }
@@ -41,4 +41,18 @@
 .search-bar-movie-rate-container span{
     font-size: 1.4rem;
     margin-left: 10px;
+}
+
+@media(max-width: 768px) {
+
+    .search-bar-movies-container a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search-bar-movie {
+        width: 100%;
+        margin: 20px 0;
+    }
 }
