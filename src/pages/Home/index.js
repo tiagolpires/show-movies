@@ -1,7 +1,7 @@
 import './style.css'
 import { useEffect, useState } from 'react'
 import Api from '../../services/Api'
-import Slider from '../../components/Slider'
+import Carousel from '../../components/Carousel'
 import CatalogHeader from '../../components/CatalogHeader'
 import Catalog from '../../components/Catalog'
 
@@ -28,7 +28,7 @@ const Index = () => {
     return (
         <>
             <main className ="main-content" style={{backgroundImage: "url(/images/background-image.jpg)"}}>
-                <Slider movies={trendingMovies}/>
+                <Carousel movies={trendingMovies}/>
             </main>
             <CatalogHeader/>
             <Catalog movies={catalogMovies} setMoviesCategorie={setCatalogMoviesCategorie} moviesCategorie={catalogMoviesCategorie}/>

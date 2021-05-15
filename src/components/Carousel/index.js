@@ -1,6 +1,6 @@
 import './style.css'
 import { useState } from 'react'
-import SlideMovie from '../SlideMovie'
+import CarouselMovie from '../CarouselMovie'
 import leftArrow from './icons/left-arrow.svg'
 import rigthArrow from './icons/right-arrow.svg'
 
@@ -11,7 +11,7 @@ const Index = ({ movies, genres }) => {
         const windowWidth = window.innerWidth
         const carouselWidth = windowWidth >= 1300 ? 1040 : windowWidth * 0.8
         const listWidth = movies.length * 258
-        const carouselDeslocateWidth = carouselWidth / 2
+        const carouselDeslocateWidth = windowWidth < 500 ? 258 : carouselWidth / 2
         let carouselNewPosition
 
         if(direction === 'left') {
@@ -27,19 +27,19 @@ const Index = ({ movies, genres }) => {
     }
 
     return (
-        <div className="slider">
-            <img src={leftArrow} alt="back" className="slider-arrow-left" onClick={() => handleArrowClick('left')}/>
-            <img src={rigthArrow} alt="next" className="slider-arrow-right" onClick={() => handleArrowClick('right')}/>
+        <div className="carousel">
+            <img src={leftArrow} alt="back" className="carousel-arrow-left" onClick={() => handleArrowClick('left')}/>
+            <img src={rigthArrow} alt="next" className="carousel-arrow-right" onClick={() => handleArrowClick('right')}/>
 
-            <div className="slider-content">
-                <div className="slider-title">
-                    <div className="slider-title-circle"></div>
+            <div className="carousel-content">
+                <div className="carousel-title">
+                    <div className="carousel-title-circle"></div>
                     <h3>LANÇAMENTOS <span>DA SEMANA</span></h3>
                 </div>
-                <div className="slider-movies-container">
-                    <div className="slider-movies" style={{marginLeft: carouselPosition}}>
+                <div className="carousel-movies-container">
+                    <div className="carousel-movies" style={{marginLeft: carouselPosition}}>
                         {movies.map(movie => (
-                            <SlideMovie key={movie.id} movie={movie} genres={genres}/>  
+                            <CarouselMovie key={movie.id} movie={movie} genres={genres}/>  
                         ))}
                     </div>
                 </div>

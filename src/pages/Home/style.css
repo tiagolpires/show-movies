@@ -7,3 +7,9 @@
     height: 90vh;
     max-height: 940px;
 }
+
+@media(max-width: 768px) {
+    .main-content {
+        height: auto;
+    }
+}
