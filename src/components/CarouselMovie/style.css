@@ -1,30 +1,35 @@
-.slide-movie-container {
+.carousel-movie-container {
     cursor: pointer;
     margin: 0 20px;
 }
-.slide-movie-image {
+.carousel-movie-image {
     width: 218px;
     height: 328px;
     margin-bottom: 14px;
     background-position: center;
     background-size: cover;
+    transition: all ease 0.2s;
 }
 
-.slide-movie-info h4{
+.carousel-movie-image:hover {
+    transform: scale(1.05);
+}
+
+.carousel-movie-info h4{
     font-size: 1.8rem;
 }
 
-.slide-movie-info span{
+.carousel-movie-info span{
     font-size: 1.3rem;
     color: #FE3189;
 }
 
-.slide-movie-rate-container {
+.carousel-movie-rate-container {
     display: flex;
     align-items: center;
 }
 
-.slide-movie-rate-container span{
+.carousel-movie-rate-container span{
     font-size: 1.4rem;
     color: #EAEAEA;
     margin-left: 10px;

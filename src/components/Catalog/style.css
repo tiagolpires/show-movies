@@ -97,3 +97,25 @@
 .catalog-movies-container.wrap .catalog-movie {
     width: 48%;
 }
+
+@media(max-width: 768px) {
+    .catalog-movies-container.wrap {
+        flex-direction: column;
+    }
+
+    .catalog-movies-container.wrap .catalog-movie {
+        width: auto;
+    }
+
+    .catalog-filter-container.display-mode {
+        display: none;
+    }
+}
+
+@media(max-width: 400px) {
+    .catalog-filter-btn,
+    .catalog-filter-trending, 
+    .catalog-load-more-button {
+        padding: 10px 4px;
+    }
+}

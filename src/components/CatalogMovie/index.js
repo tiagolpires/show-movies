@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 import rateStar from './icons/rate-star.svg'
 
 const Index = ({ movie: {title, vote_average: rate, id, poster_path: posterPath, overview, genres}}) => {
+
+    const getReducedOverview = (movieOverview) => {
+        if(window.innerWidth > 1040) return overview.length <= 200 ? overview : overview.substr(0, 200) + '...'
+        return overview.substr(0, 80) + '...'
+    }
+
     return (
             <div className="catalog-movie">
                 <Link to={`/movie/` + id}>
@@ -15,7 +21,7 @@ const Index = ({ movie: {title, vote_average: rate, id, poster_path: posterPath,
                         <img src={rateStar} alt="rate-star" />
                         <span>{rate}</span>
                     </div>
-                    <p>{overview.length <= 200 ? overview : overview.substr(0, 200) + '...'}</p>
+                    <p>{getReducedOverview(overview)}</p>
                 </div>
             </div>
     )
