@@ -11,10 +11,10 @@ const Index = ({ movies, genres, setMoviesCategorie, moviesCategorie }) => {
                 <div className="catalog-filters">
                     <div className="catalog-left-filters">
                         <div className="catalog-filter-container">
-                            <div className="catalog-filter-btn">
+                            <button className="catalog-filter-btn">
                                 <img src={downArrow} alt="down" />
-                                <span>{moviesCategorie === 'mais populares' ? 'por gênero' : moviesCategorie}</span>
-                            </div>
+                                {moviesCategorie === 'mais populares' ? 'por gênero' : moviesCategorie}
+                            </button>
                             <ul className="catalog-filter-dropdown-content">
                                 <li onClick={() => setMoviesCategorie('Ação')}>Ação</li>
                                 <li onClick={() => setMoviesCategorie('Drama')}>Drama</li>
@@ -23,18 +23,18 @@ const Index = ({ movies, genres, setMoviesCategorie, moviesCategorie }) => {
                                 <li onClick={() => setMoviesCategorie('Aventura')}>Aventura</li>
                             </ul>
                         </div>
-                        <div 
+                        <button 
                             className={`catalog-filter-trending ${moviesCategorie === 'mais populares' && 'selected'}`}
                             onClick={() => setMoviesCategorie('mais populares')}
                         >
-                            <span>mais populares</span>
-                        </div>
+                            mais populares
+                        </button>
                     </div>
-                    <div className="catalog-filter-container">
-                        <div className="catalog-filter-btn">
+                    <div className="catalog-filter-container display-mode">
+                        <button className="catalog-filter-btn">
                             <img src={downArrow} alt="down" />
-                            <span>{catalogDisplayMode}</span>
-                        </div>
+                            {catalogDisplayMode}
+                        </button>
                         <ul className="catalog-filter-dropdown-content">
                             <li onClick={() => setCatalogDisplayMode('em grid')}>Grid</li>
                             <li onClick={() => setCatalogDisplayMode('em lista')}>Lista</li>
@@ -46,9 +46,7 @@ const Index = ({ movies, genres, setMoviesCategorie, moviesCategorie }) => {
                         <CatalogMovie key={movie.id} movie={movie} genres={genres}/>  
                     ))}
                 </div>
-                <div className="catalog-load-more-button">
-                    <span>carregar mais</span>
-                </div>
+                <button className="catalog-load-more-button">carregar mais</button>
             </div>
         </section>
     )
