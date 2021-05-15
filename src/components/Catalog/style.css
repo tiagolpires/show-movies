@@ -107,6 +107,10 @@
         width: auto;
     }
 
+    .catalog-filters {
+        justify-content: center;
+    }
+
     .catalog-filter-container.display-mode {
         display: none;
     }
