@@ -46,8 +46,13 @@
 }
 
 .main-header-search-icon {
+    display: none;
     width: 20px;
     cursor: pointer;
+}
+
+.main-header-search-icon.on {
+    display: block;
 }
 
 .main-header-mobile-icon,
@@ -74,8 +79,12 @@
     }
 
     .main-header-mobile-icon {
-        display: block;
+        display: none;
         cursor: pointer;
+    }
+
+    .main-header-mobile-icon.on {
+        display: block;
     }
 
     .main-header-movile-nav-container {

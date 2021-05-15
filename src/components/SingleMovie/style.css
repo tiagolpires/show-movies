@@ -60,3 +60,40 @@
     font-size: 1.4rem;
     color: #757575;
 }
+
+@media(max-width: 1200px) {
+    .single-movie {
+        margin: 40px 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .single-movie-main {
+        height: auto;
+    }
+
+    .single-movie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single-movie-image {
+        width: 318;
+        margin: 0 0 30px 0;
+    }
+
+    .single-movie-info h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 420px) {
+    .single-movie-image {
+        width: 80vw;
+        height: 120vw;
+    }
+    
+    .single-movie-genre {
+        margin-right: 10px;
+    }
+}

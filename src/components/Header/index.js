@@ -2,7 +2,9 @@ import './style.css'
 import { useState } from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
 import searchIcon from './icons/search.svg'
+import searchIconActive from './icons/search-active.svg'
 import mobileMenuIcon from './icons/mobile-hamburguer.svg'
+import mobileMenuIconActive from './icons/mobile-hamburguer-active.svg'
 import SearchBar from '../SearchBar'
 
 const Index = () => {
@@ -13,13 +15,17 @@ const Index = () => {
         <> 
             <header className="main-header">
                 <div className="main-header-container">
-                    <div className='main-header-mobile-icon'>
-                        <img src={mobileMenuIcon} alt="menu" onClick={() => {
-                                isSearchBarActive && setIsSearchBarActive(!isSearchBarActive) 
-                                setIsMenuActive(!isMenuActive)
-                            }} 
-                        />
-                    </div>
+                    <img src={mobileMenuIcon} alt="menu" className={`main-header-mobile-icon ${!isMenuActive && 'on'}`}  
+                        onClick={() => {
+                            isSearchBarActive && setIsSearchBarActive(!isSearchBarActive) 
+                            setIsMenuActive(!isMenuActive)
+                        }} 
+                    />
+                    <img src={mobileMenuIconActive} alt="menu"  className={`main-header-mobile-icon ${isMenuActive && 'on'}`} 
+                        onClick={() => {
+                            setIsMenuActive(!isMenuActive)
+                        }} 
+                    />
                     <div className="main-header-logo">
                         <span>SUNO <b>MOVIES</b></span>
                     </div>
@@ -32,8 +38,14 @@ const Index = () => {
                                 <Link to="/#catalog">CATÁLOGO</Link>
                             </div>
                         </nav>
-                        <img src={searchIcon} alt="search" className={'main-header-search-icon'} onClick={() => {
+                        <img src={searchIcon} alt="search" className={`main-header-search-icon ${!isSearchBarActive && 'on'}`} 
+                            onClick={() => {
                                 isMenuActive && setIsMenuActive(!isMenuActive) 
+                                setIsSearchBarActive(!isSearchBarActive)
+                            }}
+                        />
+                        <img src={searchIconActive} alt="search" className={`main-header-search-icon ${isSearchBarActive && 'on'}`} 
+                            onClick={() => {
                                 setIsSearchBarActive(!isSearchBarActive)
                             }}
                         />
@@ -41,12 +53,12 @@ const Index = () => {
                 </div>
                 <div className={`main-header-movile-nav-container ${isMenuActive && 'on'}`}>
                     <nav className='main-header-movile-nav'>
-                        <Link to="/">
+                        <Link to="/" onClick={() => setIsMenuActive(!isMenuActive)}>
                             <div className='main-header-mobile-nav-item'>
                                 <span>INÍCIO</span>
                             </div>
                         </Link>
-                        <Link to="/#catalog">
+                        <Link to="/#catalog" onClick={() => setIsMenuActive(!isMenuActive)}>
                             <div className='main-header-mobile-nav-item'>
                                 <span>CATÁLOGO</span>
                             </div>
