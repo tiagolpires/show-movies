@@ -5,23 +5,31 @@ import leftArrow from './icons/left-arrow.svg'
 import rigthArrow from './icons/right-arrow.svg'
 
 const Index = ({ movies, genres }) => {
-    const [scrollX, setScrollX] = useState(0)
+    const [carouselPosition, setCarouselPosition] = useState(0)
 
-    const handleRightArrow = () =>{
-        let x = scrollX - Math.round(window.innerWidth /2)
-        let listW = movies.length * 218
-        if((window.innerWidth - listW) > x){
-            x = (window.innerWidth - listW) - 60
+    const handleArrowClick = (direction) =>{
+        const windowWidth = window.innerWidth
+        const carouselWidth = windowWidth >= 1300 ? 1040 : windowWidth * 0.8
+        const listWidth = movies.length * 258
+        const carouselDeslocateWidth = carouselWidth / 2
+        let carouselNewPosition
+
+        if(direction === 'left') {
+            carouselNewPosition = carouselPosition + carouselDeslocateWidth
+            if(carouselNewPosition > 0) carouselNewPosition = 0
         }
-        setScrollX(x)
-    }
+        if(direction === 'right') {
+            carouselNewPosition = carouselPosition - carouselDeslocateWidth
+            if((carouselWidth - listWidth) > carouselNewPosition) carouselNewPosition = (carouselWidth - listWidth)
+        }
 
-    const handleLeftArrow = () =>{}
+        setCarouselPosition(carouselNewPosition)
+    }
 
     return (
         <div className="slider">
-            <img src={leftArrow} alt="back" className="slider-arrow-left" onClick={handleLeftArrow}/>
-            <img src={rigthArrow} alt="next" className="slider-arrow-right" onClick={handleRightArrow}/>
+            <img src={leftArrow} alt="back" className="slider-arrow-left" onClick={() => handleArrowClick('left')}/>
+            <img src={rigthArrow} alt="next" className="slider-arrow-right" onClick={() => handleArrowClick('right')}/>
 
             <div className="slider-content">
                 <div className="slider-title">
@@ -29,9 +37,11 @@ const Index = ({ movies, genres }) => {
                     <h3>LANÇAMENTOS <span>DA SEMANA</span></h3>
                 </div>
                 <div className="slider-movies-container">
-                    {movies.map(movie => (
-                        <SlideMovie key={movie.id} movie={movie} genres={genres}/>  
-                    ))}
+                    <div className="slider-movies" style={{marginLeft: carouselPosition}}>
+                        {movies.map(movie => (
+                            <SlideMovie key={movie.id} movie={movie} genres={genres}/>  
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

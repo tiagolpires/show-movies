@@ -49,6 +49,12 @@
 }
 
 .slider-movies-container {
+    overflow: hidden;
+}
+
+.slider-movies {
     display: flex;
     overflow: hidden;
+    width: fit-content;
+    transition: all ease 0.5s;
 }

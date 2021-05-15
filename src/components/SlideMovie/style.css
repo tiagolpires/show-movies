@@ -8,6 +8,11 @@
     margin-bottom: 14px;
     background-position: center;
     background-size: cover;
+    transition: all ease 0.2s;
+}
+
+.slide-movie-image:hover {
+    transform: scale(1.05);
 }
 
 .slide-movie-info h4{
