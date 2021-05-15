@@ -26,9 +26,11 @@ const Index = () => {
                             setIsMenuActive(!isMenuActive)
                         }} 
                     />
-                    <div className="main-header-logo">
-                        <span>SUNO <b>MOVIES</b></span>
-                    </div>
+                    <Link to="/">
+                        <div className="main-header-logo">
+                            <span>SUNO <b>MOVIES</b></span>
+                        </div>
+                    </Link>
                     <div className="main-header-menu">
                         <nav className="main-header-nav">
                             <div className="main-header-nav-item selected">
