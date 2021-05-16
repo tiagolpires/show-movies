@@ -4,7 +4,7 @@ import Movie from './pages/Movie'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   return (
       <BrowserRouter>
         <Header/>

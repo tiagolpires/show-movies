@@ -1,6 +1,6 @@
 import './style.css'
 
-const index = () => {
+const Index = () => {
     return (
         <header className="catalog-header">
             <div className="catalog-header-container">
@@ -11,4 +11,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

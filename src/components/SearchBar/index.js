@@ -7,10 +7,6 @@ const Index = ({ isSearchBarActive, setIsSearchBarActive }) => {
     const [searchInputValue, setSearchInputValue] = useState('')
     const [searchResult, setSearchResult] = useState([])
 
-    const handleInputChange = (inputValue) => {
-        setSearchInputValue(inputValue)
-    }
-
     const searchMovie = async(inputValue) => {
         if(!inputValue) return
         const searchResult = await Api.searchMovie(inputValue)
@@ -25,7 +21,7 @@ const Index = ({ isSearchBarActive, setIsSearchBarActive }) => {
     return (
         <div className={`search-bar-container ${isSearchBarActive && 'on'}`}>
             <div className="search-bar">
-                <input type="text" placeholder="Digite aqui..." onChange={(e) => handleInputChange(e.target.value)}/>
+                <input type="text" placeholder="Digite aqui..." onChange={(e) => setSearchInputValue(e.target.value)}/>
                 <div className="search-bar-movies-container">
                     {searchResult && searchResult.map(movie => (
                         <SearchBarMovie key={movie.id} movie={movie} setIsSearchBarActive={setIsSearchBarActive}/>

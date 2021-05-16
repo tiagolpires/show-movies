@@ -30,7 +30,6 @@ const Index = ({ movies, genres }) => {
         <div className="carousel">
             <img src={leftArrow} alt="back" className="carousel-arrow-left" onClick={() => handleArrowClick('left')}/>
             <img src={rigthArrow} alt="next" className="carousel-arrow-right" onClick={() => handleArrowClick('right')}/>
-
             <div className="carousel-content">
                 <div className="carousel-title">
                     <div className="carousel-title-circle"></div>

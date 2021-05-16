@@ -1,6 +1,6 @@
 import './style.css'
 
-const index = () => {
+const Index = () => {
     return (
         <footer className="main-footer">
             <span>© 2021 Suno Movies. All rights reserved.</span>
@@ -8,4 +8,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index
