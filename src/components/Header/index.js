@@ -71,7 +71,6 @@ const Index = () => {
             </header>
             <div className={`overlay ${isSearchBarActive && 'on'} ${isMenuActive && 'on'}`}></div>
         </>
-        
     )
 }
 

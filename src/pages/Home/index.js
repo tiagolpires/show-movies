@@ -15,13 +15,14 @@ const Index = () => {
             const trendingMovies = await Api.getTrendingMovies()
             setTrendingMovies(trendingMovies)
         }
+        getTrendingMovies()
+    }, [])
 
+    useEffect(() => {
         const getCatalogMovies = async() => {
             const catalogMovies = await Api.getCatalogMovies(catalogMoviesCategorie)
             setCatalogMovies(catalogMovies)
         }
-
-        getTrendingMovies()
         getCatalogMovies()
     }, [catalogMoviesCategorie])
 

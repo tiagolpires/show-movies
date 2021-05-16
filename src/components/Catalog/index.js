@@ -3,7 +3,7 @@ import { useState } from 'react'
 import CatalogMovie from '../CatalogMovie'
 import downArrow from './icons/down-arrow.svg'
 
-const Index = ({ movies, genres, setMoviesCategorie, moviesCategorie }) => {
+const Index = ({ movies, setMoviesCategorie, moviesCategorie }) => {
     const [catalogDisplayMode, setCatalogDisplayMode] = useState('em grid')
     return (
         <section className="catalog-section">
@@ -43,7 +43,7 @@ const Index = ({ movies, genres, setMoviesCategorie, moviesCategorie }) => {
                 </div>
                 <div className={`catalog-movies-container ${catalogDisplayMode === 'em grid' ? 'wrap' : 'list'}`}>
                     {movies.map(movie => (
-                        <CatalogMovie key={movie.id} movie={movie} genres={genres}/>  
+                        <CatalogMovie key={movie.id} movie={movie}/>  
                     ))}
                 </div>
                 <button className="catalog-load-more-button">carregar mais</button>
