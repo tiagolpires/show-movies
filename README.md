@@ -4,7 +4,7 @@
 ![](public/images/git-img.png)
 
 ## About this Project
-React.Js application to search and find movies.
+React.Js application to explore and search movies.
 
 ## Functionalities
 - See week releases 
