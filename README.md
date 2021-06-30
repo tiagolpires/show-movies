@@ -1,6 +1,7 @@
 # Show Movies
 - [See this project working](https://tiagopires-show-movies.netlify.app/)
-- ![](public/images/git-img.png)
+
+![](public/images/git-img.png)
 
 ## About this Project
 React.Js application to search and find movies.
