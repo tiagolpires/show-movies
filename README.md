@@ -1,2 +1,2 @@
-# Suno Movies
-- [Veja este projeto funcionando](https://tiagopires-suno-movies.netlify.app/)
+# Show Movies
+- [Veja este projeto funcionando](https://tiagopires-show-movies.netlify.app/)
