@@ -28,7 +28,7 @@ const Index = () => {
                     />
                     <Link to="/">
                         <div className="main-header-logo">
-                            <span>SUNO <b>MOVIES</b></span>
+                            <span>SHOW <b>MOVIES</b></span>
                         </div>
                     </Link>
                     <div className="main-header-menu">
